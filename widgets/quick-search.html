@@ -1,0 +1,32 @@
+<input placeholder="Search Me" id="box" type="text" />
+<script>
+$('#box').keyup(function(){
+    var valThis = $(this).val().toLowerCase();
+    var noresult = 0;
+    if(valThis == ""){
+        $('#s-lg-widget-1429277117420 > ul > li').show();
+        noresult = 1;
+        $('.no-results-found').remove();
+    } else {
+        $('#s-lg-widget-1429277117420 > ul > li').each(function(){
+            var text = $(this).text().toLowerCase();
+            var match = text.indexOf(valThis);
+            if (match >= 0) {
+                $(this).show();
+                noresult = 1;
+                $('.no-results-found').remove();
+            } else {
+                $(this).hide();
+            }
+        });
+   };
+    if (noresult == 0) {
+        $("#s-lg-widget-1429277117420 ul").append('<li class="no-results-found">No results found.</li>');
+    }
+});
+</script>
+<script>
+springshare_widget_config_1429277117420 = { path: 'guides' };
+</script>
+<div id="s-lg-widget-1429277117420"></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=61&widget_type=1&search_terms=&search_match=2&search_type=0&sort_by=name&list_format=1&drop_text=Select+a+Guide...&output_format=1&load_type=2&enable_description=0&enable_group_search_limit=0&enable_subject_search_limit=0&widget_title=Guide+List&widget_height=250&widget_width=100%25&widget_link_color=%232954d1&widget_embed_type=1&num_results=0&enable_more_results=1&window_target=2&config_id=1429277117420";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1429277117420");</script>

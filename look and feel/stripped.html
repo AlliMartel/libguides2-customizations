@@ -1,0 +1,37 @@
+<body class="guide-page">
+    <div class="admin">
+        {{ADMIN_CMD_BAR}}
+        {{public_header}}
+        {{guide_search}}
+        {{breadcrumbs}}
+        {{ADMIN_MINI_CMD_BAR}}
+    </div>
+    <div class="wrapper">
+    <header class="page-header">
+        <h1>
+            {{guide_title}}
+            </a>
+        </h1>
+        <p>{{guide_description}}</p>
+    </header>
+    <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+    {{guide_nav}}
+    </ul>
+    {{side_nav_boxes}}
+    </nav>
+    <main>
+    {{content}}
+    {{page_prev_next_links}}
+    </main>
+    <footer>
+    {{guide_updated}}
+    {{guide_url}}
+    <a href="{{guide_print_url}}">Print Page</a>
+    <a href="{{login_url}}">Login to LibApps</a>.
+    {{guide_subjects}}
+    {{guide_tags}}
+    {{public_footer}}
+    </footer>
+    </div>
+</body>

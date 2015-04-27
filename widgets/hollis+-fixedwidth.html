@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    function quickSearchPrimo() {
+                document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g," ");
+                document.forms["searchPrimoForm"].submit();
+        }  
+</script>
+ 
+<div id="primoQuickSearchWrapper" style="margin-top: -10px;">
+    <form id="simple" name="searchPrimoForm" method="get" target="_self" style="float:left;" action="http://nrs.harvard.edu/urn-3:hul.ois:primoDeepSearch" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="quickSearchPrimo()">
+        <input type="hidden" name="institution" value="HVD">
+        <input type="hidden" name="vid" value="HVD">
+        <input type="hidden" name="tab" value="everything">
+        <input type="hidden" name="search_scope" value="everything">
+        <input type="hidden" name="mode" value="Basic">
+        <input type="hidden" name="onCampus" value="false">
+        <input type="hidden" name="displayMode" value="full">
+        <input type="hidden" name="highlight" value="true">
+        <input type="hidden" name="query" id="primoQuery"  >
+        <input type="text" id="primoQueryTemp" value="" size="65" style="height:28px;padding-left:5px;font-size:16px;border-width: 1px;border-style: solid;border-color: #8996A0;">
+        <input type="hidden" name="displayField" value="all">  
+        <input type="hidden" name="pcAvailabiltyMode" value="true">
+        <input type="hidden" name="bulkSize" value="30">
+        <input id="go"  title="Search HOLLIS+" onclick="quickSearchPrimo()" type="button" value="Search HOLLIS+" alt="Search HOLLIS plus" style="height: 32px; font-size:12px; font-weight:normal; background:#a51c30;color:#ffffff;margin-left: -6px;width: 120px;font-family: Arial, Helvetica, sans-serif;font-style: normal;border-width: 1px;border-style: solid;border-color: #a51c30;border-bottom-width: 0px;">
+    </form>
+     
+    <div style="float:left;display:inline;padding-left: 10px;">
+            <img id="hollisbetasticker" title="beta" alt="beta" src="http://hul.harvard.edu/lib/img/beta_sticker_44px.png" >
+    </div>
+     
+    <div style="clear:both;">&nbsp;</div>
+</div>

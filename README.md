@@ -7,13 +7,7 @@ Look and Feel
 
 ### Custom JS/CSS ###
 
-- custom-css.css
-
-Link to the file in LibGuides like this:
-
-```html
-<link href="https://raw.githubusercontent.com/infosoph/libguides2-customizations/master/look%20and%20feel/custom-css.css" rel="stylesheet" type="text/css"/>
-```
+- custom-css.html
 
 ### Header/Footer/Tabs/Boxes ###
 

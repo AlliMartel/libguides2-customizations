@@ -7,6 +7,7 @@
    padding: 0;
  }
 
+ .hl-toc-button,
  .hl-profile-box .s-lib-box,
  .s-lib-box-title,
  .breadcrumb,
@@ -87,6 +88,21 @@
  }
 
  /* System Navigation Bar  */
+ .navbar-toggle {
+   position: absolute !important;
+ }
+
+ @media (min-width:768px){
+	.navbar-toggle {
+		display:block
+	}
+
+ }
+ @media (min-width:1200px){
+	.navbar-toggle {
+		display:none
+	}
+ }
  .hl-site-nav {
    background-color: #F3F3F1;
    border-color: #C8C8CA;
@@ -101,8 +117,11 @@
  }
 
  .navbar-toggle {
+   position: relative;
+   right: 8px;
+   top: 8px;
+   margin: 0;
    padding: 0;
-   margin: 10px;
  }
 
  .nav > li > a {
@@ -254,5 +273,93 @@
 
  .nav > li > a:hover, .nav > li > a:focus {
    outline: 0;
+ }
+
+ .hl-toc-button {
+   margin-top: 1em;
+   margin-bottom: 1em;
+ }
+ /*
+ ** HL namespaced navbar collapse
+ ** This navbar hides for anything smaller than a desktop (1200px)
+ */
+
+.hl-navbar-collapse{
+	padding-right:15px;
+	padding-left:15px;
+	overflow-x:visible;
+	-webkit-overflow-scrolling:touch;
+	border-top:1px solid transparent;
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,.1)
+}
+
+.hl-navbar-collapse.in{
+	overflow-y:auto
+}
+
+@media (min-width:1200px){
+	.hl-navbar-collapse{
+		width:auto;
+		border-top:0;
+		-webkit-box-shadow:none;
+		box-shadow:none
+	}
+
+	.hl-navbar-collapse.collapse{
+		display:block!important;
+		height:auto!important;
+		padding-bottom:0;
+		overflow:visible!important
+	}
+
+	.hl-navbar-collapse.in{
+		overflow-y:visible
+	}
+
+	.navbar-fixed-bottom .hl-navbar-collapse,.navbar-fixed-top .hl-navbar-collapse,.navbar-static-top .hl-navbar-collapse{
+		padding-right:0;
+		padding-left:0
+	}
+
+}
+
+.navbar-fixed-bottom .hl-navbar-collapse,.navbar-fixed-top .hl-navbar-collapse{
+	max-height:340px
+}
+
+@media (max-device-width:480px)and (orientation:landscape){
+	.navbar-fixed-bottom .hl-navbar-collapse,.navbar-fixed-top .hl-navbar-collapse{
+		max-height:200px
+	}
+
+}
+
+.container-fluid>.hl-navbar-collapse,.container-fluid>.navbar-header,.container>.hl-navbar-collapse,.container>.navbar-header{
+	margin-right:-15px;
+	margin-left:-15px
+}
+
+@media (min-width:992px){
+	.container-fluid>.hl-navbar-collapse,.container-fluid>.navbar-header,.container>.hl-navbar-collapse,.container>.navbar-header{
+		margin-right:0;
+		margin-left:0
+	}
+
+ }
+@media (max-width:768px) {
+	.navbar-nav{
+		float: none;
+    margin: 7.5px -15px;
+	}
+
+	.navbar-nav>li {
+		float: none;
+	}
+
+  .hl-navbar-collapse {
+    clear: left;
+    padding-top: 1em;
+  }
  }
 </style>

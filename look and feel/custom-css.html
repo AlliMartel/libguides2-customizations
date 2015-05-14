@@ -271,7 +271,9 @@
    width: 100%;
  }
 
- .nav > li > a:hover, .nav > li > a:focus {
+ .btn:focus,
+ .nav > li > a:hover,
+ .nav > li > a:focus {
    outline: 0;
  }
 
@@ -300,7 +302,6 @@
 
 @media (min-width:1200px){
 	.hl-navbar-collapse{
-		width:auto;
 		border-top:0;
 		-webkit-box-shadow:none;
 		box-shadow:none
@@ -357,7 +358,7 @@
 		float: none;
 	}
 
-  .hl-navbar-collapse {
+  .hl-site-nav .hl-navbar-collapse {
     clear: left;
     padding-top: 1em;
   }

@@ -88,10 +88,6 @@
  }
 
  /* System Navigation Bar  */
- .navbar-toggle {
-   position: absolute !important;
- }
-
  @media (min-width:768px){
 	.navbar-toggle {
 		display:block
@@ -104,10 +100,7 @@
 	}
  }
  .hl-site-nav {
-   background-color: #F3F3F1;
-   border-color: #C8C8CA;
-   border-width: 0 0 1px 0;
-   border-radius: 0;
+   border-width: 0;
  }
 
  .pennant {
@@ -124,10 +117,27 @@
    padding: 0;
  }
 
+ .navbar-brand {
+   background-color: #FFF;
+ }
+ .navbar-header {
+   background-color: #F3F3F1;
+ }
+ .navbar-header,
+ .navbar-nav {
+   border-bottom: 1px solid #A51C30;
+ }
  .nav > li > a {
    padding: 15px;
+   border-right: 1px solid #A51c30;
+   background-color: #F3F3F1;
  }
 
+ @media (max-width:992px) {
+   .navbar-brand {
+     border-width: 0;
+   }
+ }
  .hl-profile-box .s-lib-box-title {
    display: none;
  }
@@ -239,19 +249,21 @@
    background-color: #A51C30;
  }
 
- #s-lg-tabs-container .nav-pills > .active > a:after {
-   left: 100%;
-   top: 50%;
-   border: solid transparent;
-   content: " ";
-   height: 0;
-   width: 0;
-   position: absolute;
-   pointer-events: none;
-   border-color: rgba(165, 28, 48, 0);
-   border-left-color: #A51C30;
-   border-width: 7px;
-   margin-top: -7px;
+ @media (min-width:1200px) {
+   #s-lg-tabs-container .nav-pills > .active > a:after {
+     left: 100%;
+     top: 50%;
+     border: solid transparent;
+     content: " ";
+     height: 0;
+     width: 0;
+     position: absolute;
+     pointer-events: none;
+     border-color: rgba(165, 28, 48, 0);
+     border-left-color: #A51C30;
+     border-width: 7px;
+     margin-top: -7px;
+   }
  }
  #s-lg-tabs-container .nav-tabs > .active > a:after {
    top: 100%;
@@ -347,20 +359,31 @@
 		margin-left:0
 	}
 
+  .navbar-header {
+    float: left;
+  }
  }
-@media (max-width:768px) {
+@media (max-width:1199px) {
 	.navbar-nav{
 		float: none;
-    margin: 7.5px -15px;
+    margin: 0 -15px;
+    border-width: 0 0 1px 0;
+    padding-top: 1em;
+    background-color: #F3F3F1;
 	}
 
+  .navbar-header {
+    float:none;
+  }
 	.navbar-nav>li {
 		float: none;
 	}
 
+  .navbar-nav > li > a {
+    border-width: 0;
+  }
   .hl-site-nav .hl-navbar-collapse {
     clear: left;
-    padding-top: 1em;
   }
  }
 </style>

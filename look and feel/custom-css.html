@@ -244,7 +244,7 @@
    background-color: #A51C30;
  }
 
- @media (min-width:1200px) {
+ @media (min-width:992px) {
    #s-lg-tabs-container .nav-pills > .active > a:after {
      left: 100%;
      top: 50%;
@@ -334,9 +334,29 @@
 
 }
 
- .hl-tabs-collapse > .nav-tabs > li {
+@media (min-width:992px){
+#s-lg-guide-tabs .hl-navbar-collapse{
+		border-top:0;
+		-webkit-box-shadow:none;
+		box-shadow:none
+	}
+
+#s-lg-guide-tabs .hl-navbar-collapse.collapse{
+		display:block!important;
+		height:auto!important;
+		padding-bottom:0;
+		overflow:visible!important
+	}
+
+#s-lg-guide-tabs	.hl-navbar-collapse.in{
+		overflow-y:visible
+	}
+}
+
+.hl-tabs-collapse > .nav-tabs > li {
    float: none;
  }
+
 @media (min-width:992px){
 	.hl-tabs-collapse{
 		border-top:0;

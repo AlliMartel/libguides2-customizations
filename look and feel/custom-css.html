@@ -12,19 +12,19 @@
  }
 
  .s-lib-profile-div,
- .nav > li > a,
+ .hl-site-nav .nav > li > a,
  .list-group-item a {
    font-size: 0.75em;
  }
 
  .s-lib-profile-name,
- .nav > li > a,
+ .hl-site-nav .nav > li > a,
  .list-group-item a,
  #s-lib-bc .breadcrumb {
    text-transform: uppercase;
  }
 
- .nav > li > a:hover {
+ .hl-site-nav .nav > li > a:hover {
    text-decoration: underline;
  }
 
@@ -73,7 +73,7 @@
  }
 
  /* Colors */
- .nav > li > a, .list-group-item a {
+ .hl-site-nav .nav > li > a, .list-group-item a {
    color: #000;
  }
 
@@ -107,24 +107,24 @@
    padding: 0;
  }
 
- .navbar-brand {
+ .hl-site-nav .navbar-brand {
    background-color: #FFF;
  }
- .navbar-header {
+ .hl-site-header .navbar-header {
    background-color: #F3F3F1;
  }
- .navbar-header,
- .navbar-nav {
+ .hl-site-header .navbar-header,
+ .hl-site-header .navbar-nav {
    border-bottom: 1px solid #A51C30;
  }
- .nav > li > a {
+ .hl-site-nav .nav > li > a {
    padding: 15px;
    border-right: 1px solid #A51c30;
    background-color: #F3F3F1;
  }
 
  @media (max-width:992px) {
-   .navbar-brand {
+  .hl-site-nav .navbar-brand {
      border-width: 0;
    }
  }
@@ -281,8 +281,8 @@
  }
 
  .btn:focus,
- .nav > li > a:hover,
- .nav > li > a:focus {
+ .hl-site-nav .nav > li > a:hover,
+ .hl-site-nav .nav > li > a:focus {
    outline: 0;
  }
 
@@ -396,7 +396,7 @@
   }
  }
 @media (max-width:1199px) {
-	.navbar-nav{
+	.hl-site-header .navbar-nav{
 		float: none;
     margin: 0 -15px;
     border-width: 0 0 1px 0;
@@ -407,15 +407,52 @@
   .navbar-header {
     float:none;
   }
-	.navbar-nav>li {
+	.hl-site-header .navbar-nav>li {
 		float: none;
 	}
 
-  .navbar-nav > li > a {
+  .hl-site-header .navbar-nav > li > a {
     border-width: 0;
   }
   .hl-site-nav .hl-navbar-collapse {
     clear: left;
   }
  }
+
+ /*  Admin bar */
+ #s-lg-admin-command-bar {
+   font-size: 12px;
+ }
+ .s-lib-cmd-bar + .s-lib-header {
+   margin-top: 3em;
+ }
+
+ /* Admin interface */
+ .fa-pencil::before {
+   content: "Edit ";
+   font-size: 11px;
+   font-family: FontAwesome, Arial, Helvetica, sans-serif;
+ }
+ #s-lg-admin-edit-content-text > .fa-edit::before {
+   content: "Edit ";
+   font-size: 11px;
+   font-family: FontAwesome, Arial, Helvetica, sans-serif;
+ }
+ #s-lg-guide-mini-cmd-bar .fa-lg {
+   font-size: 12px;
+   font-family: FontAwesome, Arial, Helvetica, sans-serif;
+ }
+ #s-lg-guide-mini-cmd-bar .fa-cog::before {
+    content: "Guide Settings ";
+}
+
+ #s-lg-guide-mini-cmd-bar .fa-picture-o::before {
+    content: "Guide Layout ";
+}
+ #s-lg-guide-mini-cmd-bar .fa-tasks::before {
+    content: "Backup/Export ";
+}
+ #s-lg-guide-mini-cmd-bar .fa-eye::before {
+    content: "Preview ";
+}
 </style>

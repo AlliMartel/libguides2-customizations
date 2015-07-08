@@ -3,10 +3,9 @@
  body {
    font-family: Arial, Helvetica, sans-serif; 
    font-size: 16px;
-   line-height: 1.42857;
+   line-height: 1.5;
    padding: 0;
  }
-
  .label-info {
    font-size: 1.25em !important;
  }
@@ -37,27 +36,74 @@
 
  #s-lg-guide-header-info h1,
  .s-lib-header h1 {
-   font-size: 1.5em;
+   font-size: 2em;
    display: block;
+   text-align: center;
  }
-
+.s-lib-box .s-lib-box-title {
+   font-size: 1.75em;
+   font-weight: normal;
+ }
+ .s-lib-box-content h1, 
+ .s-lib-box-content h2,
+ .s-lib-box-content h3 {
+    font-size: 1.25em;
+    margin-bottom: 0;
+    color: #666;
+ }
+ .s-lib-box-content h4, 
+ .s-lib-box-content h5,
+ .s-lib-box-content h6 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #666;
+ }
+ .s-lib-box-content li {
+    margin-bottom: 0.5em;
+ }
+ .s-lg-link-list,
+ .s-lib-box-content ul {
+    padding-left: 20px;
+ }
+ .s-lib-box-content .s-lg-icons ul {
+    padding-left: 0;
+ }
+ .s-lib-box-content p,
+ .s-lib-box-content ul {
+    margin-bottom: 1.75em;
+ }
+ .s-lg-book-title {
+   font-size: 1em;
+   font-weight: normal;
+   display: block;
+   color: #666;
+ }
  @media (min-width:768px) {
  #s-lg-guide-header-info h1,
  .s-lib-header h1 {
      font-size: 3em;
+     text-align: left;
    }
- }
 
  .s-lib-box .s-lib-box-title {
-   font-size: 1.75em;
-   font-weight: normal;
+   font-size: 2.25em;
+ }
+ .s-lib-box-content h1, 
+ .s-lib-box-content h2,
+ .s-lib-box-content h3 {
+    font-size: 1.75em;
  }
 
  .s-lg-book-title {
-   font-size: 1.25em;
-   display: block;
+    font-size: 1.25em;
  }
 
+ .s-lg-link-list,
+ .s-lib-box-content ul {
+    padding-left: 40px;
+ }
+
+}
  .s-lg-book-author {
    font-style: italic;
  }
@@ -180,9 +226,6 @@
    padding-top: 5px;
  }
 
- .s-lg-link-list {
-   padding-left: 0;
- }
  /* Tabs & Side Nav  */
  #s-lg-tabs-container .nav-pills > li > a:hover,
  #s-lg-tabs-container .nav-pills > .active > a:hover,

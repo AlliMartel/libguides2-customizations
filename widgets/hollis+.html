@@ -1,28 +1,28 @@
 <script type="text/javascript">
-    function quickSearchPrimo() {
-                document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g," ");
-                document.forms["searchPrimoForm"].submit();
-        }
+   function basicSearchPrimo() {
+     document.getElementById("basicPrimoQuery").value = "any,contains," + document.getElementById("basicQueryTemp").value.replace(/[,]/g," ");
+     document.forms["basicPrimoForm"].submit();
+ }
 </script>
-
-<div id="primoQuickSearchWrapper" style="margin-top: -10px;">
-    <form id="simple" name="searchPrimoForm" method="get" target="_self" style="float:left;" action="http://nrs.harvard.edu/urn-3:hul.ois:primoDeepSearch" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="quickSearchPrimo()">
-        <input type="hidden" name="institution" value="HVD">
-        <input type="hidden" name="vid" value="HVD">
-        <input type="hidden" name="tab" value="everything">
-        <input type="hidden" name="search_scope" value="everything">
-        <input type="hidden" name="mode" value="Basic">
-        <input type="hidden" name="onCampus" value="false">
-        <input type="hidden" name="displayMode" value="full">
-        <input type="hidden" name="highlight" value="true">
-        <input type="hidden" name="query" id="primoQuery"  >
-        <input type="hidden" name="displayField" value="all">
-        <input type="hidden" name="pcAvailabiltyMode" value="true">
-        <input type="hidden" name="bulkSize" value="30">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search HOLLIS+" name="primoQueryTemp" id="primoQueryTemp">
-                    <button class="btn btn-default" type="submit" onclick="quickSearchPrimo()"><i class="glyphicon glyphicon-search"></i></button>
-                </div>
-        </div>
-    </form>
+<div class="hollisplus-widget">
+  <form name="basicPrimoForm" method="get" target="_self" action="http://nrs.harvard.edu/urn-3:hul.ois:primoDeepSearch" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="basicSearchPrimo()">
+    <input type="hidden" name="institution" value="HVD">
+    <input type="hidden" name="vid" value="HVD">
+    <input type="hidden" name="tab" value="everything">
+    <input type="hidden" name="search_scope" value="everything">
+    <input type="hidden" name="mode" value="Basic">
+    <input type="hidden" name="onCampus" value="false">
+    <input type="hidden" name="displayMode" value="full">
+    <input type="hidden" name="highlight" value="true">
+    <input type="hidden" name="query" id="basicPrimoQuery"  >
+    <input type="hidden" name="displayField" value="all">
+    <input type="hidden" name="pcAvailabiltyMode" value="true">
+    <input type="hidden" name="bulkSize" value="30">
+    <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search Everything in HOLLIS+" name="basicQueryTemp" id="basicQueryTemp">
+      <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" onclick="basicSearchPrimo()"><i class="glyphicon glyphicon-search"></i></button>
+      </span>
+  </div>
+</form>
 </div>

@@ -1,0 +1,30 @@
+<script type="text/javascript">
+ function sublibSearchPrimo() {
+   document.getElementById("sublibQuery").value = "any,contains," + document.getElementById("sublibQueryTemp").value.replace(/[,]/g," ");
+   document.forms["sublibPrimoForm"].submit();
+ }
+</script>
+<div class="hollisplus-widget">
+  <form name="sublibPrimoForm" method="get" target="_self" action="http://nrs.harvard.edu/urn-3:hul.ois:primoDeepSearch" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="sublibSearchPrimo()">
+    <input type="hidden" name="institution" value="HVD">
+    <input type="hidden" name="vid" value="HVD">
+    <input type="hidden" name="tab" value="everything">
+    <input type="hidden" name="search_scope" value="everything">
+    <input type="hidden" name="mode" value="Basic">
+    <input type="hidden" name="onCampus" value="false">
+    <input type="hidden" name="displayMode" value="full">
+    <input type="hidden" name="highlight" value="true">
+    <input type="hidden" name="query" id="sublibQuery"  >
+    <input type="hidden" name="displayField" value="all">
+    <input type="hidden" name="pcAvailabiltyMode" value="true">
+    <input type="hidden" name="bulkSize" value="30">
+    <input type="hidden" name="fctN" value="facet_library">
+    <input type="hidden" name="fctV" value="HVD_WID">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search Widener" name="sublibQueryTemp" id="sublibQueryTemp">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit" onclick="sublibSearchPrimo()"><i class="glyphicon glyphicon-search"></i></button>
+      </span>
+    </div>
+  </form>
+</div>

@@ -50,7 +50,7 @@
  .s-lib-box-content h2,
  .s-lib-box-content h3 {
     font-size: 1.25em;
-    margin-bottom: 0;
+    margin-bottom: 0.25em;
     color: #666;
  }
  .s-lib-box-content h4, 
@@ -133,6 +133,11 @@
  /* Colors */
  .hl-site-nav .nav > li > a, .list-group-item a {
    color: #000;
+ }
+ .ui-widget-content a, a,
+ .ui-widget-content a:hover, a:hover, 
+ .ui-widget-content a:focus, a:focus {
+   color: #a51c30;
  }
 
  /* System Navigation Bar  */
@@ -232,6 +237,14 @@
    margin: 0 0 1em 0;
  }
 
+.s-lib-box img[style*="float: left;"] {
+  margin-right: 2em !important;
+}
+
+.s-lib-box img[style*="float: right;"] {
+   margin-left: 2em !important;
+ }
+
  @media (min-width: 1200px) {
    .s-lib-box {
     padding: 0 40px 0 40px;
@@ -277,10 +290,17 @@
 }
  #s-lg-guide-tabs .s-lg-tabs-side .s-lg-boxnav .list-group-item {
    border: 0;
-   background-color: #EEE;
+   background-color: #fff;
    padding: 13px;
+   margin-left: 2em !important;
+   border-left: 1px dashed #bbb;
  }
-
+ #s-lg-guide-tabs .s-lg-tabs-side .s-lg-boxnav .list-group-item a {
+     text-transform: none;
+     font-size: 1em;
+     font-weight: normal;
+     font-family: Arial, Helvetica, sans-serif;
+ }
  #s-lg-guide-tabs .s-lg-tabs-side .s-lg-boxnav,
  #s-lg-guide-tabs .s-lg-tabs-side .s-lg-boxnav .list-group-item,
  .nav-tabs > li > a {
@@ -585,5 +605,26 @@
  .s-lib-box-content .hl-profile li {
      font-size: 0.88em;
      margin-bottom: 0;
+ }
+ /* Home Page */
+ #s-lg-hp-nav {
+     background-color: inherit;
+ }
+ #s-lg-hp-nav-bottom {
+     display: none;
+     }
+ .panel-default {
+     border-color: #eee;
+ }
+ .panel-heading {
+     background-color: #fafafa;
+     border-color: #fafafa;
+ }
+ .panel-default > .panel-heading > a > .bold, .panel-default a.bold {
+     font-weight: normal;
+ }
+ .panel-default > .panel-heading .badge {
+     color: #555;
+     background-color: #ddd;
  }
 </style>

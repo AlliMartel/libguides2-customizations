@@ -5,7 +5,17 @@
       <div id="s-lib-bc" class="col-md-6">
         {{breadcrumbs}}
       </div>
-      <div id="hl-lib-sg" class="col-md-6">{{search_guides}}</div>
+      <div id="hl-lib-sg" class="col-md-6">
+          <form role="search" class="form-inline pull-right" action="srch.php">
+              <div class="form-group">
+                  <div class="s-lg-public-search-field">
+                      <label class="control-label sr-only" for="s-lg-guide-search">Enter Search Words</label>
+                      <input placeholder="Find A Research Guide" class="form-control" id="s-lg-guide-search" name="q" type="text">
+                  </div>
+              </div>
+              <button class="btn btn-default" type="submit">Search</button>
+          </form>
+      </div>
     </div>
     <h1 id="s-lib-public-header-title">{{title}}
     </h1>
@@ -33,9 +43,6 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div id="hl-quick-search">
-          <input placeholder="Search Me" id="box" type="text" />
         </div>
         <div id="s-lg-index-list" class="">
           {{content}}

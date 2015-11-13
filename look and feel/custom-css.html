@@ -1,7 +1,7 @@
 <style type="text/css">
  /*  Typography  */
  body {
-   font-family: Arial, Helvetica, sans-serif; 
+   font-family: Arial, Helvetica, sans-serif;
    font-size: 16px;
    line-height: 1.5;
    padding: 0;
@@ -46,14 +46,14 @@
    font-size: 1.5em;
    font-weight: normal;
  }
- .s-lib-box-content h1, 
+ .s-lib-box-content h1,
  .s-lib-box-content h2,
  .s-lib-box-content h3 {
     font-size: 1.25em;
     margin-bottom: 0.25em;
     color: #666;
  }
- .s-lib-box-content h4, 
+ .s-lib-box-content h4,
  .s-lib-box-content h5,
  .s-lib-box-content h6 {
     font-size: 1em;
@@ -118,7 +118,49 @@
  .s-lg-book-author {
    font-style: italic;
  }
+ .ckeditor-table {
+   width: 100%;
+   max-width: 100%;
+   margin-bottom: 20px;
+   padding: 0 !important;
+   border-spacing: 0 !important;
+   border-collapse: collapse;
+   border: 0px none !important;
+ }
 
+ .ckeditor-table > caption + thead > tr:first-child > th {
+   border-top: 0px none !important;
+   border-left: 0px none !important;
+   border-right: 0px none !important;
+ }
+
+ .ckeditor-table > thead > tr > th {
+   vertical-align: bottom !important;
+   border-bottom: 2px solid #DDD !important;
+ }
+
+ .ckeditor-table > thead > tr > th {
+   padding: 8px !important;
+   line-height: 1.42857;
+ }
+
+ .ckeditor-table > tbody > tr > td {
+   padding: 8px !important;
+   line-height: 1.42857;
+   vertical-align: top !important;
+   border-top: 1px solid #DDD !important;
+   border-left: 0px none !important;
+   border-right: 0px none !important;
+   border-bottom: 0px none !important;
+ }
+
+ .ckeditor-table > tbody {
+   border: 0px none !important;
+ }
+
+ .ckeditor-table > tbody > tr:hover {
+   background-color: #fafafa;
+ }
  /* Layout */
  .container {
    max-width: 1400px;
@@ -150,7 +192,7 @@
    background-color: #293352;
  }
  .ui-widget-content a, a,
- .ui-widget-content a:hover, a:hover, 
+ .ui-widget-content a:hover, a:hover,
  .ui-widget-content a:focus, a:focus {
    color: #a51c30;
  }
@@ -654,5 +696,16 @@
  .panel-default > .panel-heading .badge {
      color: #555;
      background-color: #ddd;
+ }
+ /* Subject Page */
+ #s-lg-az-count {
+     display: none;
+ }
+ #s-lg-sb-search-bar .navbar-default {
+     border-color: #bbb;
+ }
+ #s-lg-sb-search-bar .navbar-default .navbar-brand,
+ #s-lg-sb-search-bar .navbar-default .navbar-brand:hover {
+     color: #a51c30;
  }
 </style>

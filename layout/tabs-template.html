@@ -27,20 +27,20 @@
         </div>
         <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
             <div id="s-lg-guide-tabs" class="hl-tabs-collapse collapse tabs">
-                <ul class="nav nav-tabs">
+                <ul role="navigation" class="nav nav-tabs">
                     {{guide_nav}}
                 </ul>
             </div>
         </div>
         <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
         <!-- BEGIN: Guide Content -->
-        <div id="s-lg-guide-main" class="container s-lib-main s-lib-side-borders">
+        <div tabindex="-1" role="main" id="s-lg-guide-main" class="container s-lib-main s-lib-side-borders">
             {{content}}
             {{page_prev_next_links}}
         </div>
         <!-- END: Guide Content -->
         <!-- BEGIN: Page Footer -->
-        <div id="s-lib-footer-public" class="s-lib-footer footer s-lib-side-borders">
+        <div role="footer" id="s-lib-footer-public" class="s-lib-footer footer s-lib-side-borders">
             <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
                 <ul id="s-lg-guide-header-attributes" class="">
                     <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
